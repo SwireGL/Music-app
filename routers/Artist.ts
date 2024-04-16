@@ -16,8 +16,8 @@ artistsRouter.get('/', async (req, res) => {
 artistsRouter.post('/', async (req, res) => {
     const artistData: ArtistMutation = {
         name: req.body.name,
-        image: req.body.image,
-        info: req.body.info,
+        image: req.file ? req.file.filename : null,
+        info: req.body.info
     };
 
     const artist = new Artist(artistData);
