@@ -15,6 +15,10 @@ const UserSchema = new Schema<UserFields, UserModel, UserMethods>({
     password: {
         type: String,
         required: true,
+    },
+    token: {
+        type: String,
+        required: true,
     }
 });
 

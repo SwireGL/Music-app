@@ -29,3 +29,8 @@ interface UserMethods {
 }
 
 type UserModel = Model<UserFields, {}, UserMethods>;
+
+export interface TrackHistoryMutation {
+    user: string;
+    track: string;
+}
